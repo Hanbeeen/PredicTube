@@ -143,3 +143,155 @@ mvn spring-boot:run
 - [YouTube Data API](https://developers.google.com/youtube/v3/getting-started?hl=ko)
 - [Google Cloud Vision API](https://cloud.google.com/vision/docs/features-list?hl=ko)
 
+
+
+---
+
+
+## Overview
+
+**PredicTube** is a web service that uses artificial intelligence (AI) to analyze YouTube video thumbnails and titles to predict their performance (expected views) and help optimize content. It assists YouTube creators and video marketers by enabling them to anticipate performance before uploading and strategically improve their videos.
+
+## Background & Purpose
+
+- YouTube is the most influential digital marketing platform in South Korea, with tens of millions of monthly users consuming content.
+- Due to intensified competition, creators invest a significant amount of time and resources in selecting thumbnails and titles.
+- PredicTube aims to provide objective, data-driven analysis to improve content production efficiency and maximize marketing effectiveness.
+
+## Key Features
+
+### View Prediction
+- Predicts the expected number of views using inputs such as video title, thumbnail image, subscriber count, and category via an AI model.
+
+### ChatGPT-Based Title Suggestions
+- Analyzes keywords from the user's title and uses the ChatGPT API to suggest three optimized titles.
+
+### History Management
+- Stores past input values and prediction results, allowing users to compare and optimize content based on the best-performing data.
+
+### Data Visualization
+- Visualizes the correlation between views and various features (such as category and image properties) to support video optimization strategies.
+
+### Keyword Frequency Ranking
+- Provides rankings of frequently used keywords by category, helping users select content topics more effectively.
+
+## Tech Stack
+
+### Backend
+- Python 3.8+
+- Flask web framework
+- TensorFlow/Keras (deep learning model)
+- NLTK, Gensim (natural language processing)
+- NumPy, Pandas (data analysis)
+- SQLAlchemy (database ORM)
+
+### Frontend
+- Java (Servlet/JSP)
+- HTML5, CSS3, JavaScript, jQuery
+- Bootstrap 4
+
+### Database
+- MySQL
+
+### APIs & External Services
+- YouTube Data API v3
+- Google Cloud Vision API (OCR, face detection, content safety)
+- ChatGPT API
+
+## Project Structure
+
+```
+.
+├── Flask/
+│   ├── api/
+│   ├── data/
+│   ├── models/
+│   │   └── pickle/
+│   ├── notebooks/
+│   ├── static/
+│   │   └── images/
+│   └── config.template.py
+│
+└── Web/
+    ├── src/
+    │   ├── controller/
+    │   ├── dao/
+    │   └── model/
+    ├── WebContent/
+    │   ├── resources/
+    │   ├── pages/
+    │   ├── sql/
+    │   ├── WEB-INF/
+    │   └── META-INF/
+    └── pom.xml
+```
+
+## Installation
+
+1. Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Set up configuration file:
+- Copy `Flask/config.template.py` to `Flask/config.py`
+- Enter your API keys and database credentials
+
+3. Initialize the database:
+- Execute SQL scripts in the `Web/WebContent/sql` folder in your MySQL instance
+
+4. Build the web application:
+```bash
+cd Web
+mvn clean install
+```
+
+## How to Run
+
+1. Start the Flask server:
+```bash
+cd Flask
+python app.py
+```
+
+2. Start the web server:
+```bash
+cd Web
+mvn spring-boot:run
+```
+
+## Model Training & Development Process
+
+- Automatically collected approximately 100,000 YouTube video data using the YouTube Data API
+- Analyzed thumbnail images via the Google Cloud Vision API (OCR, face detection, content safety check)
+- Built a multi-input, multi-output model combining:
+  - LSTM for natural language processing (title text)
+  - MLP for numeric feature analysis (subscriber count, face presence, etc.)
+- Optimized the model using hyperparameter tuning
+
+## Notes
+
+- Never upload sensitive files such as `config.py`, API keys, or large datasets to GitHub.
+- Build artifacts should be generated locally and are not included in version control.
+
+## Expected Outcomes & Applications
+
+- Enhances content production efficiency through objective AI analysis
+- Provides strategic support for video marketing optimization
+- Supplies valuable data for consumer behavior and digital media research
+
+## Future Plans
+
+- Conduct beta testing through deployment on an external server
+- Explore commercialization potential through feature expansion and data scaling
+
+## License
+
+This project is licensed under the MIT License.
+
+## References
+
+- [NLP with Deep Learning (Wikidocs)](https://wikidocs.net/book/2155)
+- [YouTube Data API](https://developers.google.com/youtube/v3/getting-started?hl=en)
+- [Google Cloud Vision API](https://cloud.google.com/vision/docs/features-list?hl=en)
+
