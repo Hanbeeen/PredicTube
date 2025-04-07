@@ -1,0 +1,23 @@
+# Flask 웹 서버
+flask==2.0.1
+flask-cors==3.0.10
+
+# 데이터 처리
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.2
+
+# 자연어 처리
+nltk==3.8.1
+gensim==4.3.1
+tensorflow==2.12.0
+keras==2.12.0
+
+# 데이터베이스
+sqlalchemy==2.0.0
+pymysql==1.0.3
+
+# 유틸리티
+python-dotenv==1.0.0
+requests==2.31.0
+tqdm==4.65.0 

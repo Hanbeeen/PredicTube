@@ -1,0 +1,70 @@
+# 민감한 정보가 포함된 파일
+config.py
+*.gitignore.json
+*.gitignore.py
+*.json
+*.key
+*.pem
+Flask/api/
+Flask/keys/
+Flask/token/
+
+# Python 관련 임시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# 가상 환경
+venv/
+env/
+ENV/
+
+# IDE 설정 파일
+.idea/
+.vscode/
+*.swp
+*.swo
+.classpath
+.project
+.settings/
+
+# 빌드 결과물
+build/
+dist/
+target/
+*.egg-info/
+*.class
+*.jar
+*.war
+*.ear
+
+# 로그 및 데이터베이스
+*.log
+*.sqlite
+*.db
+
+# 임시 파일
+*.tmp
+*.temp
+temp/
+tmp/
+test*.jsp
+Flask/구버전 파일들/
+Flask/backup/
+
+# 데이터 파일
+Flask/data/
+Flask/excel/*.xlsx
+Flask/scaler/
+
+# 업로드된 파일
+Flask/uploads/
+Flask/static/uploads/
+
+# 모델 파일 (용량이 클 수 있음)
+*.h5
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
