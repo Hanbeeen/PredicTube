@@ -1,5 +1,7 @@
 # PredicTube
 
+[![Video Label](http://img.youtube.com/vi/UXic_qg4fbo/0.jpg)](https://youtu.be/UXic_qg4fbo)
+
 ## 개요
 PredicTube는 유튜브 영상의 썸네일과 제목을 인공지능(AI) 기술로 분석하여 영상의 성공 가능성(예상 조회수)을 예측하고, 영상 콘텐츠 최적화를 돕는 웹 서비스입니다. 유튜브 크리에이터와 영상 마케팅 담당자들이 영상 업로드 전에 성과를 미리 예측하여 보다 전략적인 콘텐츠 제작이 가능하도록 지원합니다.
 
