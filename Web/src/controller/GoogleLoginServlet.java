@@ -43,8 +43,10 @@ public class GoogleLoginServlet extends HttpServlet {
             // 인증 코드를 사용하여 Google에서 액세스 토큰을 가져오는 코드
         	// Google OAuth 2.0 엔드포인트 및 인증 정보
         	String tokenUrl = "https://accounts.google.com/o/oauth2/token";
-        	String CLIENT_ID = System.getenv("GOOGLE_CLIENT_ID");
+        	// 환경변수 기반
+            String CLIENT_ID = System.getenv("GOOGLE_CLIENT_ID");
             String CLIENT_SECRET = System.getenv("GOOGLE_CLIENT_SECRET");
+
         	String redirectUri = "http://localhost:8080/GoogleLogin/GoogleLoginServlet";
 
         	// 액세스 토큰 요청을 위한 POST 데이터
