@@ -3,7 +3,7 @@
 > **Team ThunderCoding (벼락코딩)**  
 > **Project Period**: Sep 25, 2023 – Feb 1, 2024  
 > **Project Type**: Youth-led Real-World Experience Project  
-> **Developed By**: Hanbin Im, Jeong Jeonghoon  
+> **Developed By**: Hanbin Im, Jeonghoon Jeong  
 
 ---
 
